@@ -1,8 +1,8 @@
 class App {
-    constructor(fieldWidth = 13, fieldHeight = 11, isWrap = false) {
+    constructor(fieldWidth, fieldHeight, isWrap) {
         const canvas = document.createElement('canvas');
-        canvas.width = fieldWidth * Item.SIZE;
-        canvas.height = fieldHeight * Item.SIZE;
+        canvas.width = fieldWidth * ITEM_SIZE;
+        canvas.height = fieldHeight * ITEM_SIZE;
         document.body.appendChild(canvas);
         canvas.addEventListener('click', this.onmouseclick.bind(this), false);
         canvas.addEventListener('mouseup', this.onmouseup.bind(this), false);
@@ -14,20 +14,20 @@ class App {
         });
     }
     load() {
-        return Promise.all(Object.keys(Item.srcs).map(key => {
+        return Promise.all(Object.keys(srcs).map(key => {
             return new Promise(resolve => {
                 const img = document.createElement('img');
-                img.src = 'img/' + Item.srcs[key];
+                img.src = 'img/' + srcs[key];
                 img.style.display = 'none';
-                img.onload = resolve;
-                Item.imgs[key] = img;
+                img.onload = () => resolve();
+                imgs[key] = img;
                 document.body.appendChild(img);
             })
         }));
     }
     click(x, y, isCw) {
-        const row = Math.floor(x / Item.SIZE);
-        const col = Math.floor(y / Item.SIZE);
+        const row = Math.floor(x / ITEM_SIZE);
+        const col = Math.floor(y / ITEM_SIZE);
         const item = this.field.getItem(row, col);
         if (item) {
             if (isCw) {
@@ -57,6 +57,6 @@ class App {
     }
 }
 const rect = document.body.getBoundingClientRect();
-const w = ~~(rect.width / Item.SIZE);
-const h = ~~(rect.height / Item.SIZE);
+const w = Math.floor(rect.width / ITEM_SIZE);
+const h = Math.floor(rect.height / ITEM_SIZE);
 const app = new App(w, h, true);
