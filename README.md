@@ -1,5 +1,5 @@
 # netwalk
-Netwalk vanila-js (canvas) port
+Netwalk vanilla-js (canvas) port
 Play it here:
 https://a13ks3y.github.io/netwalk/
 

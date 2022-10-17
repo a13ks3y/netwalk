@@ -24,6 +24,11 @@
 <body>
     <script type="text/javascript" src="item.class.js"></script>    
     <script type="text/javascript" src="field.class.js"></script>    
-    <script type="text/javascript" src="index.js"></script>    
+    <script type="text/javascript" src="index.js"></script>
+    <script>
+        if (navigator.serviceWorker) {
+            navigator.serviceWorker.register('/netwalk/sw.js', {scope: '/netwalk/'});
+        }
+    </script>
 </body>
 </html>
