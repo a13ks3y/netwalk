@@ -1,0 +1,18 @@
+{
+  "name": "NetWalk",
+  "short_name": "NetWalk",
+  "display": "standalone",
+  "description": "The NetWalk game JS implementation",
+  "scope": "/netwalk/",
+  "start_url": "/netwalk/",
+  "background_color": "#abcdef",
+  "theme_color": "#abcdef",
+  "icons": [
+    {
+      "src": "img\/icon.png",
+      "sizes": "144x144",
+      "type": "image\/png",
+      "density": "1"
+    }
+  ]
+}
