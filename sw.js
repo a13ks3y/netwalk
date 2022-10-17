@@ -1,5 +1,5 @@
 const APP_PREFIX = 'Netwalk_';     // Identifier for this app (this needs to be consistent across every cache update)
-const VERSION = 'version_02';              // Version of the off-line cache (change this value everytime you want to update cache)
+const VERSION = 'version_03';              // Version of the off-line cache (change this value everytime you want to update cache)
 const CACHE_NAME = APP_PREFIX + VERSION;
 const URLS = [
     '/netwalk/',
