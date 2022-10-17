@@ -1,5 +1,5 @@
 const APP_PREFIX = 'Netwalk_';     // Identifier for this app (this needs to be consistent across every cache update)
-const VERSION = 'version_01';              // Version of the off-line cache (change this value everytime you want to update cache)
+const VERSION = 'version_02';              // Version of the off-line cache (change this value everytime you want to update cache)
 const CACHE_NAME = APP_PREFIX + VERSION;
 const URLS = [
     '/netwalk/',
@@ -7,6 +7,33 @@ const URLS = [
     '/netwalk/index.js',
     '/netwalk/item.class.js',
     '/netwalk/field.class.js',
+    '/netwalk/img/background.png',
+    '/netwalk/img/cable0001.png',
+    '/netwalk/img/cable0010.png',
+    '/netwalk/img/cable0011.png',
+    '/netwalk/img/cable0100.png',
+    '/netwalk/img/cable0101.png',
+    '/netwalk/img/cable0110.png',
+    '/netwalk/img/cable0111.png',
+    '/netwalk/img/cable1000.png',
+    '/netwalk/img/cable1001.png',
+    '/netwalk/img/cable1010.png',
+    '/netwalk/img/cable1011.png',
+    '/netwalk/img/cable1100.png',
+    '/netwalk/img/cable1101.png',
+    '/netwalk/img/cable1110.png',
+    '/netwalk/img/cable1111.png',
+    '/netwalk/img/computer1.png',
+    '/netwalk/img/computer2.png',
+    '/netwalk/img/focus.png',
+    '/netwalk/img/highscores.png',
+    '/netwalk/img/homepage.png',
+    '/netwalk/img/locked.png',
+    '/netwalk/img/newgame.png',
+    '/netwalk/img/qnetwalk.png',
+    '/netwalk/img/quit.png',
+    '/netwalk/img/server.png',
+    '/netwalk/img/shadow.png',
 ];
 
 // Respond with cached resources
