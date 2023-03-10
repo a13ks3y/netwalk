@@ -56,6 +56,7 @@ class App {
         }
     }
 }
+// @todo: subscribe to document.ready event
 const rect = document.body.getBoundingClientRect();
 const w = Math.floor(rect.width / ITEM_SIZE);
 const h = Math.floor(rect.height / ITEM_SIZE);
