@@ -50,11 +50,11 @@ class Item {
         }
     }
     rotate() {
-        const pipka = [0, 2, 4, 9, 8, 10, 3, 11, 1, 12, 5, 13, 6, 14, 7,];
-        this.shape = pipka[this.shape];
+        const rotateStates = [0, 2, 4, 9, 8, 10, 3, 11, 1, 12, 5, 13, 6, 14, 7,];
+        this.shape = rotateStates[this.shape];
     }
     rotateCW() {
-        const pipka = [0, 8, 1, 9, 2, 10, 3, 11, 4, 12, 5, 13, 6, 14, 7,];
-        this.shape = pipka[this.shape];
+        const rotateStates = [0, 8, 1, 9, 2, 10, 3, 11, 4, 12, 5, 13, 6, 14, 7,];
+        this.shape = rotateStates[this.shape];
     }
 }
