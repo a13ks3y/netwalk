@@ -97,32 +97,32 @@ class Field {
         return this.getNO(item).filter(o => !this.getItem(o.x, o.y));
     }
     getNO(item) {
-        const pipka = [
+        const nns = [
             { x: item.x - 0, y: item.y - 1, dir: 8, odir: 2 }, // top  
             { x: item.x + 1, y: item.y - 0, dir: 4, odir: 1 }, // right 
             { x: item.x - 0, y: item.y + 1, dir: 2, odir: 8 }, // bottom 
             { x: item.x - 1, y: item.y - 0, dir: 1, odir: 4 }, // left 
         ];
         if (!this.isWrap) {
-            return pipka.filter(o => {
+            return nns.filter(o => {
                 return o.x >= 0 && o.x < this.width && o.y >= 0 && o.y < this.height;
             });
         } else {
-            return pipka.map(o => {
-                const pupka = Object.assign({}, o);
+            return nns.map(o => {
+                const n = Object.assign({}, o);
                 if (o.x < 0) {
-                    pupka.x = this.width - 1;
+                    n.x = this.width - 1;
                 }
                 if (o.y < 0) {
-                    pupka.y = this.height - 1;
+                    n.y = this.height - 1;
                 }
                 if (o.x >= this.width) {
-                    pupka.x = 0;
+                    n.x = 0;
                 }
                 if (o.y >= this.height) {
-                    pupka.y = 0;
+                    n.y = 0;
                 }
-                return pupka;
+                return n;
             });
         }
     }
